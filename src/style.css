@@ -1,0 +1,106 @@
+/* Initialisation */
+:root {
+  --font-color: #eee;
+  --font-color-dark: #aaa;
+  --border-color: #222;
+  --background-light: rgba(0, 0, 0, 50%);
+  --background-light-hover: rgba(99, 99, 99, 0.4);
+  --background-dark: rgba(0, 0, 0, 0.9);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  font-family: "Montserrat", cursive;
+  font-size: 1.6rem;
+  color: var(--font-color);
+  background-image: url("images/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: var(--background-light);
+}
+
+nav button {
+  margin: 50px 10px;
+  background-color: transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* content */
+
+#content {
+  display: flex;
+  justify-content: center;
+  margin: 10vh 0;
+}
+/* Home */
+
+#homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  background-color: rgba(71, 69, 69, 0.5);
+  width: 80%;
+}
+#homeContainer h1,
+div {
+  color: var(--font-color);
+}
