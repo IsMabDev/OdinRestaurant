@@ -1,4 +1,5 @@
-import { createHtmlElement } from "./index.js";
+import { createHtmlElement } from "./golbalFunctions.js";
+
 import { content } from "./index.js";
 
 function home() {

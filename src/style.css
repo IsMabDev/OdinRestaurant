@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: "Montserrat", cursive;
-  font-size: 1.6rem;
+  font-size: min(3vw, 1.6rem);
   color: var(--font-color);
   background-image: url("images/background.jpg");
   background-attachment: fixed;
@@ -32,6 +32,11 @@ body {
 
 header {
   font-size: 2.4rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 h1,
@@ -63,11 +68,12 @@ button {
 nav {
   display: flex;
   justify-content: center;
-  width: 100vw;
   background-color: var(--background-light);
 }
 
 nav button {
+  width: 20%;
+  font-size: min(5vw, 1.7rem);
   margin: 50px 10px;
   background-color: transparent;
 }
@@ -75,16 +81,21 @@ nav button {
 body {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* content */
 
 #content {
+  width: 70%;
+
   display: flex;
   justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
   margin: 10vh 0;
 }
 /* Home */
@@ -97,10 +108,68 @@ body {
   justify-content: center;
   justify-items: center;
   text-align: center;
-  background-color: rgba(71, 69, 69, 0.5);
+  background-color: rgba(71, 69, 69, 0.8);
   width: 80%;
 }
 #homeContainer h1,
 div {
   color: var(--font-color);
+}
+
+/* Menu */
+#menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--background-light);
+}
+#menu .menuCategory {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+#menu .menuItem {
+  width: 100%;
+
+  flex: 1;
+}
+#menu .titleImage {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 5vw;
+  justify-content: space-between;
+}
+
+.titleImage h2 {
+  font-size: max(3vw, 1.5rem);
+}
+
+#menu .titleImage img {
+  max-width: 200px;
+  width: 50%;
+}
+
+.menuCategory h1 {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(95, 61, 61, 70%);
+  color: rgb(189, 183, 189);
+}
+
+/* footer */
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: var(--background-dark);
+}
+footer a {
+  margin: 0 5px;
+}
+footer a:hover {
+  color: var(--font-color-dark);
 }

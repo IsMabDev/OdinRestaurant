@@ -1,22 +1,31 @@
 // import "./style.css";
 import { home } from "./home.js";
+import { menu } from "./menu.js";
+import { contact } from "./contact.js";
+import { renderFooter } from "./footer.js";
+import { createHtmlElement } from "./golbalFunctions.js";
 
 const content = document.querySelector("#content");
+const body = document.querySelector("body");
+const homeButton = document.querySelector("#homeButton");
+const menuButton = document.querySelector("#menuButton");
+const contactButton = document.querySelector("#contactButton");
 
-function createHtmlElement(type, id, arrayClasses, content) {
-  const element = document.createElement(type);
-  if (id) element.id = id;
-  if (arrayClasses) {
-    arrayClasses.forEach((myClass) => {
-      element.classList.add(myClass);
-    });
-  }
-  if (content) {
-    element.innerText = content;
-  }
-
-  return element;
-}
 home();
 
-export { createHtmlElement, content };
+homeButton.addEventListener("click", () => {
+  content.innerText = "";
+  home();
+});
+menuButton.addEventListener("click", () => {
+  content.innerText = "";
+  menu();
+});
+contactButton.addEventListener("click", () => {
+  content.innerText = "";
+  contact();
+});
+
+renderFooter();
+
+export { content, body };
