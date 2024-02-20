@@ -4,6 +4,7 @@ import { menu } from "./menu.js";
 import { contact } from "./contact.js";
 import { renderFooter } from "./footer.js";
 import { createHtmlElement } from "./golbalFunctions.js";
+import "./style.css";
 
 const content = document.querySelector("#content");
 const body = document.querySelector("body");
